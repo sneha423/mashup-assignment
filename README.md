@@ -11,9 +11,10 @@ This project implements the **Mashup** assignment using two programs:
 Create and activate a virtual environment (recommended).
 
 Install dependencies:
-
+```
 bash
 pip install -r requirements.txt
+```
 
 FFmpeg must be installed and on PATH (for pydub and yt-dlp).
 
@@ -23,10 +24,8 @@ Usage
 Run from the project root:
 
 ```
-
 bash
 python 102303033.py "<SingerName>" <NumberOfVideos> <AudioDuration> <OutputFileName>
-
 ```
 Example
 ```
