@@ -7,21 +7,7 @@ This project implements the **Mashup** assignment using two programs:
 
 ---
 
-## 1. Project Structure
-
-```text
-mashup-assignment/
-├─ requirements.txt
-├─ 102303033.py           # Program 1 – CLI (name = roll number)
-├─ mashup_core/
-│   ├─ __init__.py
-│   └─ mashup.py          # Shared mashup logic
-└─ webapp/
-    ├─ app.py             # Program 2 – Flask web service
-    └─ templates/
-        └─ index.html     # Web form + progress bar
-
-2. Installation
+## 2. Installation
 Create and activate a virtual environment (recommended).
 
 Install dependencies:
@@ -31,17 +17,23 @@ pip install -r requirements.txt
 
 FFmpeg must be installed and on PATH (for pydub and yt-dlp).
 
-3. Program 1 – CLI Mashup
+## 3. Program 1 – CLI Mashup
 Usage
 
 Run from the project root:
 
-bash
-python 102303033.py "<SingerName>" <NumberOfVideos> <AudioDuration> <OutputFileName>
-Example
+```
 
 bash
+python 102303033.py "<SingerName>" <NumberOfVideos> <AudioDuration> <OutputFileName>
+
+```
+Example
+```
+bash
 python 102303033.py "Arijit Singh" 12 25 mashup.mp3
+```
+
 Behavior
 
 Downloads N YouTube videos for the given singer using yt-dlp.
@@ -58,11 +50,12 @@ AudioDuration > 20
 
 Prints clear error messages for wrong parameters or runtime errors.
 
-4. Program 2 – Web Mashup Service
+## 4. Program 2 – Web Mashup Service
 Run the Flask app from the project root:
-
+```
 bash
 python -m webapp.app
+```
 Then open http://127.0.0.1:5000/ in a browser.
 
 Form inputs
@@ -88,6 +81,4 @@ Sends the ZIP to the provided email using Flask-Mail.
 The web page shows a progress bar and status messages while the mashup is being created.
 Note: For Gmail, an app password is required with 2‑Step Verification enabled.
 
-5. Shared Mashup Logic
-The core mashup logic is implemented in mashup_core/mashup.py as a function create
 
