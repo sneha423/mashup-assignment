@@ -36,7 +36,9 @@ def _search_and_download_audio(
         ],
     }
 
-    search_query = f"ytsearch{n}:{singer_name}"
+    # Bias search towards songs instead of random videos
+    search_query = f"ytsearch{n}:{singer_name} official audio lyrics"
+
 
     audio_files: List[str] = []
 
